@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArCalculating</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- External Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- aos -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
+</head>
+
+<body>
+    <header class="bg-light ">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand brandName" href="#">ArCalculating</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active ">
+                            <a class="nav-link m-1" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link m-1" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link m-1" href="#">
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link m-1" href="#">
+                                Service
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link m-1" href="#">
+                                Help Center
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h1 class="calculateHeading text-center pt-5">Feet to Mile</h1>
+                <div class="row" data-aos="flip-down">
+                    <div class="col-md-6 mb-3">
+                        <div class="inputBox">
+                            <h3 class="text-center font-size pt-2 mb-3">
+                                <b>Give Feet</b>
+                            </h3>
+                            <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                placeholder="Enter feet" id="getFeet">
+                            <div class="EnterBox">
+                                <button type="button" id="feetBtn" class="btn btn-info enterBtn">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="inputBox">
+                            <h3 class="text-center font-size pt-2 ">
+                                <b>Display Mile</b>
+                            </h3>
+                            <div class="bg-white w-50 h-50 m-auto mileBox">
+                                <p class="text-center pt-3 mileText">
+                                    <span id="mile"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kilometer to Meters -->
+                <div class="pt-5">
+                    <h1 class="calculateHeading text-center pt-5">Kilometer To Meter</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Kilometer</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter Kilometer" id="getKilometer">
+                                <div class="EnterBox">
+                                    <button type="button" id="kilometerBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Display Meters</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="showMeter"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block"
+                                        id="clearKilometer">Clear all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kilometer to Meters -->
+                <div class="inchFeet">
+                    <h1 class="calculateHeading text-center pt-5">Inch To Feet</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Inch</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter Inch" id="getInch">
+                                <div class="EnterBox">
+                                    <button type="button" id="inchBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Display Feet</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="feetBox"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block" id="clearInchFeet">Clear
+                                        all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="woodBg pb-4">
+            <div class="container mt-5">
+                <div class="budgetCalculator">
+                    <h1 class="text-center calculateHeading">Budget Calculator</h1>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center pt-4">
+                                    <b>Watch Quantity</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter watch quantity" id="watchQuantity">
+                                <p class="text-center">
+                                    <b>1 Watch Price = 50 $</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center pt-4">
+                                    <b>Phone Quantity</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter phone quantity" id="phoneQuantity">
+                                <p class="text-center">
+                                    <b>1 Phone Price = 100 $</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center pt-4">
+                                    <b>Laptop Quantity</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter Laptop Quantity" id="laptopQuantity">
+                                <p class="text-center">
+                                    <b>1 Laptop Price = 500 $</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <div class="row mb-5">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="inputBox mt-2" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block"
+                                        id="budgetBtn">Enter</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="totalWood inputBox pb-2">
+                                    <h3 class="text-center pt-3">
+                                        <b>Total Budget</b>
+                                    </h3>
+                                    <div class="w-50 h-50 bg-white totalWoodDisplay">
+                                        <p class="text-center pt-4">
+                                            <span id="totalBudget"></span>
+                                            <span id="defaultBudgetNumber">00</span>
+                                            $
+                                        </p>
+                                    </div>
+                                    <div class="clearBox">
+                                        <button type="button" class="btn btn-info w-100 mt-2" id="clearBudget">clear
+                                            all</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-center calculateHeading">Wood Calculator</h1>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="inputBox">
+                            <h3 class="text-center pt-4">
+                                <b>Chair Quantity</b>
+                            </h3>
+                            <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                placeholder="Enter chair quantity" id="chairQuantity">
+                            <p class="text-center">
+                                <b>To Create 1 Chair = 1 Cubic Feet</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="inputBox">
+                            <h3 class="text-center pt-4">
+                                <b>Table Quantity</b>
+                            </h3>
+                            <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                placeholder="Enter table quantity" id="tableQuantity">
+                            <p class="text-center">
+                                <b>To Create 1 Table = 3 Cubic Feet</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="inputBox">
+                            <h3 class="text-center pt-4">
+                                <b>Bedstead Quantity</b>
+                            </h3>
+                            <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                placeholder="Enter Bedstead Quantity" id="bedSteadyQuantity">
+                            <p class="text-center">
+                                <b>To Create 1 Bedstead = 5 Cubic Feet</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="inputBox mt-2" id="woodBox">
+                            <button type="button" class="btn btn-info btn-lg btn-block" id="woodBtn">Enter</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="totalWood inputBox pb-2">
+                            <h3 class="text-center pt-3">
+                                <b>Total Wood</b>
+                            </h3>
+                            <div class="w-50 h-50 bg-white totalWoodDisplay">
+                                <p class="text-center pt-4">
+                                    <span id="totalWoodQubicFeet"></span>
+                                    <span id="defaultNumber">00</span>
+                                    Cubic feet
+                                </p>
+                            </div>
+                            <div class="clearBox">
+                                <button type="button" class="btn btn-info w-100 mt-2" id="clearWood">clear all</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-5 brickBg pb-5">
+            <div class="container">
+                <!-- Hotel Cost Calculator start-->
+                <div class="mb-5 pb-5">
+                    <h1 class="text-center calculateHeading">Hotel Cost Calculator</h1>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Nights Quantity</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="nights Quantity" id="getNightInput">
+                                <div class="EnterBox">
+                                    <button type="button" id="nightBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Total Stay Cost</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="showNightPrice"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block" id="clearNight">Clear
+                                        all</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="inputBox floorBox">
+                                <h3 class="text-center font-size">
+                                    <b>Night Packages</b>
+                                </h3>
+                                <div class="bg-white w-75 m-auto mileBox">
+                                    <p class="floorHeight pl-2">
+                                        1 to 10 Stay Nights = 100 $
+                                        <br>
+                                        11 to 20 Stay Nights = 80 $
+                                        <br>
+                                        21 to upcoming Stay Nights = 50 $
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hotel Cost Calculator end-->
+                <div>
+                    <h1 class="text-center calculateHeading">Brick Calculator</h1>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Floor Quantity</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Floor Quantity" id="getFloorInput">
+                                <div class="EnterBox">
+                                    <button type="button" id="floorBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Total Brick Pice</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="brickPice"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block" id="clearBrick">Clear
+                                        all</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="inputBox floorBox">
+                                <h3 class="text-center font-size">
+                                    <b>Floor Height</b>
+                                </h3>
+                                <p class="text-center pice">
+                                    <b>To create 1 feet = 1000 pice brick</b>
+                                </p>
+                                <div class="bg-white w-75 m-auto mileBox hightBox">
+                                    <p class="floorHeight pl-2">
+                                        1 to 10 Floor Height = 15 feet
+                                        <br>
+                                        11 to 20 Floor Height = 12 feet
+                                        <br>
+                                        21 to upcoming Floor Height = 10 feet
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <h1 class="text-center calculateHeading pb-3">Check Leap Year</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Year</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter Year" id="getYear">
+                                <div class="EnterBox">
+                                    <button type="button" id="leapYearBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Display LeapYear</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="leapYear"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block" id="clearLeapYear">Clear
+                                        all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5">
+                    <h1 class="text-center calculateHeading pb-3 pt-4">Factorial Of Any Number</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Any Number</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter any number" id="getAnyNumber">
+                                <div class="EnterBox">
+                                    <button type="button" id="factorialBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Display Factorial Number</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText" id="dFactorial">
+                                        <span id="showFactorial"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block"
+                                        id="clearFactorial">Clear all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5">
+                    <h1 class="text-center calculateHeading pb-3 pt-4">Check Odd or Even Number</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Any Number</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter any number" id="getOddNumber">
+                                <div class="EnterBox">
+                                    <button type="button" id="oddNumberBtn" class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Display Odd or Even</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText">
+                                        <span id="showOddNumber"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block" id="clearOddEven">Clear
+                                        all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5">
+                    <h1 class="text-center calculateHeading pb-3 pt-4">Check Prime Number</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="text-center font-size pt-2 mb-3">
+                                    <b>Give Any Number</b>
+                                </h3>
+                                <input type="number" class="form-control text-center w-75 m-auto inputFont"
+                                    placeholder="Enter any number" id="primeNotPrime">
+                                <div class="EnterBox">
+                                    <button type="button" id="primeNotPrimeBtn"
+                                        class="btn btn-info enterBtn">Enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="inputBox">
+                                <h3 class="ml-5 font-size pt-2 ">
+                                    <b>Prime or Not Prime</b>
+                                </h3>
+                                <div class="bg-white w-50 h-50 float-left ml-5 mileBox">
+                                    <p class="text-center pt-3 mileText primeNotPrime">
+                                        <span id="showPrimeNotPrime"></span>
+                                    </p>
+                                </div>
+                                <div class="inputBox mt-2 float-right mr-4" id="woodBox">
+                                    <button type="button" class="btn btn-info btn-lg btn-block"
+                                        id="clearPrimeNotPrime">Clear all</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- aos js -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script> -->
+</body>
+
+</html>
